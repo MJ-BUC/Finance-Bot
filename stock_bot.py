@@ -1,4 +1,4 @@
-"""Mark Bucaro / This is my discord bot to display stock 
+"""Mark / This is my discord bot to display stock 
 information requests using the Yahoo Finance API"""
 import discord
 import logging
