@@ -80,4 +80,4 @@ class MyClient(discord.Client):
 client = MyClient()
 
 # bot TOKEN
-client.run('ODY3NTQ2ODcxMDk3NTg5Nzkw.YPir_A.q54wgcj3X8FcJBekXXkm0Xet5SY')
+client.run('TOKEN')
