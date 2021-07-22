@@ -15,7 +15,7 @@ class MyClient(discord.Client):
 
         #Help command allowing user to view available commands
         if message.content.startswith('$help'):
-            await message.channel.send("Current commands: \n '$hello' \n " +
+            await message.channel.send("Current commands: \n '$help' \n '$hello' \n " +
                                        "'$search' (Search for a stock) \n '$example' \n " +
                                        "'$pss' (popular stock symbols)")
 
