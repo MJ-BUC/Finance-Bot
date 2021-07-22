@@ -1,6 +1,6 @@
 # Finance-Bot
 This is my discord bot to display stock 
-information requests using the Yahoo Finance API
+information requests using the Yahoo Finance API.
 
 ![FinanceBotHelp](https://user-images.githubusercontent.com/82846057/126687939-635e1b1b-b5d9-4b9e-a75b-487524f85e4a.PNG)
 
