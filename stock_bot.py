@@ -13,18 +13,22 @@ class MyClient(discord.Client):
         if message.author == client.user:
             return
 
+        #Help command allowing user to view available commands
         if message.content.startswith('$help'):
             await message.channel.send("Current commands: \n '$hello' \n " +
                                        "'$search' (Search for a stock) \n '$example' \n " +
                                        "'$pss' (popular stock symbols)")
 
+        #Simple Greeting
         if message.content.startswith('$hello'):
             await message.channel.send("Hello! I'm Finance Bot! I'm currently under development.")
 
+        #Shows the user a list of popular stocks (they are not required choices)
         if message.content.startswith('$pss'):
             await message.channel.send("Popular Stock Symbols:\nAMC inc: 'AMC'\nApple: 'AAPL'\nNVIDIA Corp: 'NVDA'\n" +
                                        "Moderna inc: 'MRNA'\nMicrosoft Corp: 'MSFT'\nTesla inc: 'TSLA'\nAmazon.com inc: 'AMZN'")
 
+        #Shows the user an example output
         if message.content.startswith('$example'):
             stock = yf.Ticker("AAPL")
 
@@ -45,6 +49,7 @@ class MyClient(discord.Client):
                                        'Bid : '+str(bid)+'\n' + 'Ask : '+str(ask)+'\n' + 'DayLow : '+str(dayLow)+'\n' +
                                        'DayHigh : '+str(dayHigh)+'\n' + 'Volume : '+str(volume))
 
+        #Main tool allowing users to search for any stock using its symbol
         if message.content.startswith('$search'):
             await message.channel.send("Please enter a stock symbol to search.")
 
@@ -79,5 +84,5 @@ class MyClient(discord.Client):
 
 client = MyClient()
 
-# bot TOKEN
+# Your bot TOKEN goes here
 client.run('TOKEN')
